@@ -1,0 +1,135 @@
+# 🏅 Olympic Medal Tracker
+
+A dynamic web app for tracking Olympic medals in real-time using a **mock API** (via [mockapi.io](https://mockapi.io)).  
+It allows **admins to add/update/delete games** and **automatically updates medal tallies by country**.
+
+---
+
+## 📌 Features
+
+### 👥 Public View
+- View **ranked medal tally** of all countries
+- Medals calculated automatically from all added games
+- Stats:
+  - Total number of games
+  - Total medals awarded
+  - Total number of participating countries
+- Recent games list
+
+### 🔐 Admin Panel
+- Login with:
+  - **Username:** `admin`
+  - **Password:** `admin123`
+- Add new games with:
+  - Game name
+  - Category
+  - Gold, silver, bronze winning countries
+  - Date of the game
+- Edit or delete existing games
+- Real-time updates to public view
+
+---
+
+## 🧩 Tech Stack
+
+- **HTML + CSS + JavaScript** (Vanilla)
+- **Mock API** using [MockAPI.io](https://mockapi.io/)
+- **LocalStorage** fallback for offline support
+
+---
+
+## 🗂️ File Structure
+
+olympic-medal-tracker/
+├── index.html # Public Medal Tally View
+├── admin.html # Admin Panel (Add/Edit/Delete Games)
+├── login.html # Admin login screen
+├── style.css # Shared styling
+├── main.js # Combined JS logic for admin + public
+├── login.js # Login logic
+├── README.md # Project description
+
+
+
+## 🌍 API Endpoint
+
+All data is fetched from:
+
+https://685a435e9f6ef961115594b8.mockapi.io/samplegames
+
+css
+Copy
+Edit
+
+Each game object has:
+
+```json
+{
+  "id": "1",
+  "name": "100m Sprint",
+  "category": "Track",
+  "gold": "USA",
+  "silver": "China",
+  "bronze": "India",
+  "date": "2024-07-20"
+}
+🚀 How It Works
+Initial medal data is loaded from a default object.
+
+Games are fetched from the mock API.
+
+Each game's gold/silver/bronze winners are used to rebuild the entire medal tally.
+
+The medal table is ranked by:
+
+Gold (descending)
+
+Silver (tie-breaker)
+
+Bronze (secondary tie-breaker)
+
+Admins can:
+
+Add a new game (medals auto-added)
+
+Edit existing games (old medals adjusted)
+
+Delete games (medals removed)
+
+LocalStorage stores a fallback copy of games if the API is unreachable.
+
+🛠️ Future Enhancements
+Real authentication for admin access
+
+Filter by sport/event/category
+
+Search by country
+
+Download/export medal data as CSV or PDF
+
+Responsive UI for mobile devices
+
+Firebase or SQL backend
+
+🧪 Sample Medal Data
+js
+Copy
+Edit
+let medalData = {
+  USA: { gold: 42, silver: 38, bronze: 36 },
+  China: { gold: 39, silver: 35, bronze: 30 },
+  Japan: { gold: 28, silver: 20, bronze: 21 },
+  ...
+};
+📄 License
+This project is part of a Hackathon submission.
+Feel free to fork or extend for educational/non-commercial use.
+
+🙋‍♀️ Created By
+Likitha Sivani Yellamilli
+Hackathon: Olympic Medal List
+2025
+
+pgsql
+Copy
+Edit

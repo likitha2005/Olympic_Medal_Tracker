@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Medal Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+   
+       <div class="header">
+            <h1>🏅 Olympic Medal Tracker</h1>
+            
+        <button id="adminLoginBtn" onclick="location.href='login.html'">Admin Login</button>
+     </div>
+      <div class="container">
+
+            <table class="medal-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Country</th>
+                        <th>🥇 Gold</th>
+                        <th>🥈 Silver</th>
+                        <th>🥉 Bronze</th>
+                        <th>Total</th>
+                    </
+                </thead>
+                
+                <tbody id="medalTableBody">
+                </tbody>
+            </table>
+        
+        </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-games">326</div>
+                    <div>Total Games</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-countries">206</div>
+                    <div>Participating Countries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-medals">126</div>
+                    <div>Total Medals</div>
+                </div>
+            </div>
+            <h3 style="margin-top: 5px; margin-bottom : 3px;">Recent Games</h3>
+            <div id="recent-games"></div>
+             
+
+            
+     
+    <script src="script.js"></script>   
+    </body>
+  </html>
+   
+</html>
+
+

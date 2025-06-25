@@ -1,0 +1,84 @@
+ <!-- to get this dashboard you have to login using username - admin and password - admin123 in the admin lofin page which resides in login.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />cd
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olympic Medal Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="admin-panel section" id="admin-panel">
+    <h2>🏅 Admin Dashboard</h2>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" id="total-games">9</div>
+        <div>Total Games</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="total-countries">120</div>
+        <div>Participating Countries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="total-medals">126</div>
+        <div>Total Medals</div>
+      </div>
+    </div>
+
+    <h3>Add New Game</h3>
+    <form id="game-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="game-name">Game Name</label>
+          <input type="text" id="game-name" required />
+        </div>
+        <div class="form-group">
+          <label for="game-category">Category</label>
+          <select id="game-category" required>
+            <option value="">Select Category</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Athletics">Athletics</option>
+            <option value="Gymnastics">Gymnastics</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Football">Football</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Boxing">Boxing</option>
+            <option value="Cycling">Cycling</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gold-country">Gold Medal</label>
+          <input type="text" id="gold-country" placeholder="Country name" />
+        </div>
+        <div class="form-group">
+          <label for="silver-country">Silver Medal</label>
+          <input type="text" id="silver-country" placeholder="Country name" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="bronze-country">Bronze Medal</label>
+          <input type="text" id="bronze-country" placeholder="Country name" />
+        </div>
+        <div class="form-group">
+          <label for="game-date">Date</label>
+          <input type="date" id="game-date" required />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Add Game</button>
+    </form>
+
+    <h3>Manage Games</h3>
+    <div id="games-list"></div>
+  </div>
+
+
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
